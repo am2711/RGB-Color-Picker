@@ -16,6 +16,7 @@ for (var i = 0; i < squares.length; i++) {
 	//grab color of clicked square
 	var clickedColor=this.style.backgroundColor; //using .background gives none repeat scroll 0% 0%
 	//compare color to clicked color
+	//console.log(clickedColor); //bug check
 	if(clickedColor === pickedColor){
 		messageDisplay.textContent="Correct";
 		changeColors(clickedColor);
@@ -54,5 +55,5 @@ function randomColor() {
 	var g = Math.floor(Math.random() * 256);
 	var b = Math.floor(Math.random() * 256);
 
-	return "rgb("+r+" ,"+g+" ,"+b+")";
+	return "rgb("+r+", "+g+", "+b+")";
 }
