@@ -20,14 +20,13 @@ for (var i = 0; i < squares.length; i++) {
 	//add click listeners to squares
 	squares[i].addEventListener("click",function() {
 	//grab color of clicked square
-	var clickedColor=this.style.background;
+	var clickedColor=this.style.backgroundColor; //using .background gives none repeat scroll 0% 0%
 	//compare color to clicked color
-	// if(clickedColor === pickedColor){
-	// 	alert("Correct");
-	// }	else{
-	// 		alert("Wrong");
-	// 	}
-	console.log(clickedColor); //gives none repeat scroll 0% 0%
-	console.log(pickedColor);
+	if(clickedColor === pickedColor){
+		alert("Correct");
+	}	else{
+			alert("Wrong");
+		}
+
 	});
 }
