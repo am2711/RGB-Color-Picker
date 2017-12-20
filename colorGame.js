@@ -10,6 +10,7 @@ var colors = [
 var squares=document.querySelectorAll(".square");
 var pickedColor=colors[3];
 var colorDisplay=document.getElementById('colorDisplay');
+var messageDisplay=document.querySelector("#message");
 
 colorDisplay.textContent=pickedColor.toUpperCase();
 
@@ -23,10 +24,22 @@ for (var i = 0; i < squares.length; i++) {
 	var clickedColor=this.style.backgroundColor; //using .background gives none repeat scroll 0% 0%
 	//compare color to clicked color
 	if(clickedColor === pickedColor){
-		alert("Correct");
+		messageDisplay.textContent="Correct";
+		changeColors(clickedColor);
 	}	else{
-			alert("Wrong");
+			this.style.backgroundColor="#232323";
+			messageDisplay.textContent="Try again";
 		}
 
 	});
+}
+
+
+function changeColors(color) {
+	// body...
+for (var i = 0; i < squares.length; i++) {
+	squares[i].style.background = color;
+}
+
+
 }
