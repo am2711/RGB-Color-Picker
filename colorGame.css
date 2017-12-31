@@ -51,3 +51,8 @@ button{
 	letter-spacing: 1px;
 	font-size: inherit;
 }
+
+#message{
+	display: inline-block;
+	width: 20%;
+}
